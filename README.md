@@ -2,11 +2,11 @@
 
 [![Build Status](https://travis-ci.org/poanetwork/poa-ballot-stats.svg?branch=master)](https://travis-ci.org/poanetwork/poa-ballot-stats) 
 
-POA ballot stats is a command line tool used to display voting statistics for the [POA network](https://poa.network/). 
+WOA ballot stats is a command line tool used to display voting statistics for the [WOA network](https://woa.vapory.org/). 
 
-[Validators](https://github.com/poanetwork/wiki/wiki/Role-of-Validator) on the network engage in active governance, managing their roles and creating on-chain consensus. This is achieved through a balloting process. 
+Validators on the network engage in active governance, managing their roles and creating on-chain consensus. This is achieved through a balloting process. 
 
-Ballot tracking provides transparency for POA token holders and promotes validator accountability. The poa-ballot-stats tool displays active validator voting participation ordered by percentage of missed votes. 
+Ballot tracking provides transparency for WOA token holders and promotes validator accountability. The woa-ballot-stats tool displays active validator voting participation ordered by percentage of missed votes. 
 
 The default display includes:
 * non-participation/associated ballots
@@ -19,22 +19,22 @@ The default display includes:
 
 
 ## Dependencies
-Prior to downloading poa-ballot-stats, install and activate a fully synchronized node connected to the POA network. See the [POA installation guide](https://github.com/poanetwork/wiki/wiki/POA-Installation) for instructions.
+Prior to downloading poa-ballot-stats, install and activate a fully synchronized node connected to the WOA network. See the POA installation guide for instructions.
 
-**Note:** poa-ballot-stats must access the full network logs. Use these flags when running a node: `--pruning=archive --no-warp`
+**Note:** woa-ballot-stats must access the full network logs. Use these flags when running a node: `--pruning=archive --no-warp`
 
 **Example:**
 ```bash
-$ parity --chain poa-chain-spec/spec.json --reserved-peers poa-chain-spec/bootnodes.txt --pruning=archive --no-warp
+$ tetsy --chain woa-chain-spec/spec.json --reserved-peers woa-chain-spec/bootnodes.txt --pruning=archive --no-warp
 ```
 
 ## Installation
 
 ### Stable Release
 
-Download the archive for your platform from the latest [release](https://github.com/poanetwork/poa-ballot-stats/releases) and unpack.
+Download the archive for your platform from the latest [release](https://github.com/woanetwork/woa-ballot-stats/releases) and unpack.
 
-Run the tool with `./poa-ballot-stats <options>`.
+Run the tool with `./woa-ballot-stats <options>`.
 
 #### Options
 
@@ -57,30 +57,30 @@ Run the tool with `./poa-ballot-stats <options>`.
 
 ```bash
 # run the application
-$ ./poa-ballot-stats
+$ ./woa-ballot-stats
 
 # view options
-$ ./poa-ballot-stats -h
+$ ./woa-ballot-stats -h
 
 # track voting on poa core network, display voting details for previous 10 weeks
-$ ./poa-ballot-stats https://core.poa.network -v -p "10 weeks"
+$ ./woa-ballot-stats https://core.poa.network -v -p "10 weeks"
 
 # specify the contracts/sokol.json map file and run on sokol test network with voting details
-$ ./poa-ballot-stats -c contracts/sokol.json https://sokol.poa.network -v
+$ ./woa-ballot-stats -c contracts/sokol.json https://sokol.woa.network -v
 
 ```
 
 ### Latest code
 
-If you have a recent version of [Rust](https://www.rust-lang.org/), you can clone this repository and use `cargo run --` instead of `./poa-ballot-stats` to compile and run the latest version of the code.
+If you have a recent version of [Rust](https://www.rust-lang.org/), you can clone this repository and use `cargo run --` instead of `./woa-ballot-stats` to compile and run the latest version of the code.
 
 ## Troubleshooting
 
 ### No Events Found error
 
-1.	Parity must be fully synced to the correct node and running in full mode, not "light" mode. Check Parity UI and/or Task Manager to confirm Parity is synced and actively connected to peers.
+1.	Tetsy must be fully synced to the correct node and running in full mode, not "light" mode. Check Tetsy UI and/or Task Manager to confirm Tetsy is synced and actively connected to peers.
 
-2.	`poa-ballot-stats` must run with a file matching the Parity network node. Use the contracts address file (`-c` option) that matches the network connection. Included are files for the main POA network ("core") and the POA test network ("sokol"). The Parity UI will show the current network selection in green. Make sure this is the correct network, and not the Foundation or other Ethereum network. 
+2.	`woa-ballot-stats` must run with a file matching the Tetsy network node. Use the contracts address file (`-c` option) that matches the network connection. Included are files for the main WOA network ("core") and the WOA test network ("sokol"). The Tetsy UI will show the current network selection in green. Make sure this is the correct network, and not the Foundation or other Vapory network. 
 
 ## Versioning
 
@@ -90,7 +90,7 @@ We use [SemVer](http://semver.org/) for versioning. See the [project releases](h
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for contribution and pull request protocol.
 
-Contributors should look into [issues](https://github.com/poanetwork/poa-ballot-stats/issues) or reference RFC9 [Statistics of ballots](https://github.com/poanetwork/RFC/issues/9) for additional information.
+Contributors should look into [issues](https://github.com/woaproject/woa-ballot-stats/issues) or reference RFC9 [Statistics of ballots](https://github.com/woanetwork/RFC/issues/9) for additional information.
 
 ## License
 
