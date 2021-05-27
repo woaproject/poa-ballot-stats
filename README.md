@@ -1,4 +1,4 @@
-# POA ballot stats
+# WOA ballot stats
 
 [![Build Status](https://travis-ci.org/poanetwork/poa-ballot-stats.svg?branch=master)](https://travis-ci.org/poanetwork/poa-ballot-stats) 
 
